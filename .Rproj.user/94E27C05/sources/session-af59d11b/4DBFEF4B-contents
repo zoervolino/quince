@@ -1,0 +1,104 @@
+body {
+  background-color: MidnightBlue;
+}
+
+h1 {
+  font-family: Love Letters;
+  font-size: 50px;
+  color: white;
+}
+
+.carousel {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.carousel .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.thumbnail-navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.thumbnail-slide {
+  width: 80px;
+  height: 60px;
+  margin: 0 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.thumbnail-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail-slide.active img {
+  transform: scale(1.1);
+}
+
+.navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.scrollable-bar {
+  display: flex;
+  overflow-x: auto;
+}
+
+.scrollable-content {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+}
+
+.previous-button,
+.next-button {
+  padding: 10px;
+  font-size: 20px;
+}
+
+
+.navigation button {
+  background-color: #ccc;
+  border: none;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.navigation button.active {
+  background-color: #555;
+}
